@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pkg3050_final_project.StockController">
+   <children>
+      <MenuBar prefHeight="39.0" prefWidth="600.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleOpen" text="Open" />
+              <MenuItem mnemonicParsing="false" onAction="#handleClose" text="Close" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#handleClear" text="Clear" />
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="About">
+            <items>
+              <MenuItem mnemonicParsing="false" text="ReadMe" />
+                  <MenuItem mnemonicParsing="false" text="Help" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <HBox layoutY="361.0" prefHeight="39.0" prefWidth="600.0" spacing="5.0">
+         <children>
+            <TextField fx:id="daysTextField" prefHeight="39.0" prefWidth="70.0" />
+            <Button mnemonicParsing="false" onAction="#handleSetDays" prefHeight="39.0" text="Set Days" />
+            <TextField fx:id="transactionsTextField" prefHeight="39.0" prefWidth="70.0" />
+            <Button mnemonicParsing="false" onAction="#handleSetTransactions" prefHeight="39.0" text="Set Transactions" />
+            <Label fx:id="lastAction" prefHeight="39.0" />
+         </children>
+      </HBox>
+      <ScrollPane layoutY="39.0" prefHeight="184.0" prefWidth="600.0">
+        <content>
+          <AnchorPane fx:id="anchorPane" minHeight="0.0" minWidth="0.0" prefWidth="600.0">
+               <children>
+                  <Label fx:id="fromFile" alignment="TOP_LEFT" prefWidth="600.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <ScrollPane layoutY="223.0" prefHeight="138.0" prefWidth="600.0">
+        <content>
+          <AnchorPane fx:id="processedPane" minHeight="0.0" minWidth="0.0" prefWidth="600.0">
+               <children>
+                  <Label fx:id="processedData" prefWidth="600.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <HBox alignment="CENTER_LEFT" layoutY="39.0" prefHeight="39.0" prefWidth="600.0">
+         <children>
+            <Button mnemonicParsing="false" text="Compute" />
+         </children>
+         <padding>
+            <Insets left="500.0" />
+         </padding>
+      </HBox>
+   </children>
+</AnchorPane>
